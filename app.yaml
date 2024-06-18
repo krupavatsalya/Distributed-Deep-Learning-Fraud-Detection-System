@@ -1,0 +1,6 @@
+runtime: python39  # or whichever version you are using
+entrypoint: gunicorn -b :$PORT main:app  # Command to start the app
+
+handlers:
+- url: /.*
+  script: main.py
